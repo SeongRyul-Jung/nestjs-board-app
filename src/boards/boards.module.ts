@@ -7,7 +7,8 @@ import { BoardRepository } from './board.repository';
 
 @Module({
   imports: [
-    TypeOrmExModule.forFeature([BoardRepository])
+    TypeOrmExModule.forFe
+    // TypeOrmExModule.forFeature([BoardRepository])
     // TypeOrmModule.forFeature([BoardRepository])
     // TypeOrmExModule.forFeature([forCustomRepository])
   ],
