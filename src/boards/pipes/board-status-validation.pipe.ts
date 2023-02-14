@@ -1,5 +1,5 @@
 import { ArgumentMetadata, BadRequestException, PipeTransform } from "@nestjs/common";
-import { BoardStatus } from "../board.model";
+import { BoardStatus } from "../board-status.enum";
 
 export class BoardStatusValidationPipe implements PipeTransform {
 
@@ -11,7 +11,7 @@ export class BoardStatusValidationPipe implements PipeTransform {
   transform(value: any) {
     value = value.toUpperCase();
 
-    if(!this.isStatusValid(value)) {
+    if (!this.isStatusValid(value)) {
       throw new BadRequestException(`${value} isn't in the status options`);
     }
 
